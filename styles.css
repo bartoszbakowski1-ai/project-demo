@@ -1677,38 +1677,51 @@ body {
         justify-content: center;
     }
 
-    /* Fix 1: Countdown table in single row */
-    .countdown-table {
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
-        justify-content: center;
-        white-space: nowrap;
+    /* Fix 1: Top banner - NO WRAP, single line */
+    .top-banner {
+        padding: 10px 12px;
     }
 
-    .countdown-table .time-unit {
-        font-size: 28px;
+    .top-banner .container {
+        flex-wrap: nowrap !important;
+        gap: 6px;
+        font-size: 11px;
+        overflow-x: auto;
     }
 
-    .countdown-table .time-label {
+    .banner-icon {
+        font-size: 16px;
+    }
+
+    .countdown {
+        font-size: 14px;
+        gap: 2px;
+        flex-shrink: 0;
+    }
+
+    .banner-badge {
+        padding: 4px 10px;
         font-size: 10px;
+        flex-shrink: 0;
     }
 
-    /* Raise hero content */
+    /* Raise hero content significantly */
     .hero-content {
-        padding-top: 140px;
+        padding-top: 80px !important;
     }
 
     /* Fix 2: Smaller badge and raise header */
-    .hero-badge {
-        padding: 10px 18px;
-        font-size: 13px;
-        margin-bottom: 16px;
+    .badge-tag {
+        padding: 8px 16px !important;
+        font-size: 12px !important;
+        margin-bottom: 8px !important;
     }
 
-    .hero h1 {
-        margin-top: 16px;
-        font-size: 42px;
+    .hero-title {
+        margin-top: 8px !important;
+        margin-bottom: 16px !important;
+        font-size: 40px !important;
+        line-height: 1.1 !important;
     }
 
     /* Fix 3: Different color for subtitle text */
