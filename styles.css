@@ -1707,19 +1707,19 @@ body {
 
     /* Raise hero content significantly */
     .hero-content {
-        padding-top: 80px !important;
+        padding-top: 40px !important;
     }
 
     /* Fix 2: Smaller badge and raise header */
     .badge-tag {
         padding: 8px 16px !important;
         font-size: 12px !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 4px !important;
     }
 
     .hero-title {
-        margin-top: 8px !important;
-        margin-bottom: 16px !important;
+        margin-top: 4px !important;
+        margin-bottom: 12px !important;
         font-size: 40px !important;
         line-height: 1.1 !important;
     }
