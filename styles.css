@@ -1676,6 +1676,115 @@ body {
     .social-proof-compact {
         justify-content: center;
     }
+
+    /* Fix 1: Countdown table in single row */
+    .countdown-table {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .countdown-table .time-unit {
+        font-size: 28px;
+    }
+
+    .countdown-table .time-label {
+        font-size: 10px;
+    }
+
+    /* Raise hero content */
+    .hero-content {
+        padding-top: 140px;
+    }
+
+    /* Fix 2: Smaller badge and raise header */
+    .hero-badge {
+        padding: 10px 18px;
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .hero h1 {
+        margin-top: 16px;
+        font-size: 42px;
+    }
+
+    /* Fix 3: Different color for subtitle text */
+    .hero-subtitle {
+        color: var(--magenta-dark);
+    }
+
+    /* Fix 4: Disable parallax on mobile - fixed background */
+    .shape {
+        position: fixed !important;
+        animation: none !important;
+        will-change: auto !important;
+    }
+
+    /* Fix 5: Larger video placeholder */
+    .video-placeholder {
+        min-height: 320px;
+    }
+
+    /* Fix 6: Icons inline with text */
+    .section-header-modern {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: left;
+    }
+
+    .section-icon-modern {
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .section-title-modern {
+        margin: 0;
+        text-align: left;
+    }
+
+    /* Fix 7: Smaller timeline numbers on mobile */
+    .timeline-number {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 28px !important;
+        margin-bottom: 12px;
+    }
+
+    /* Fix 8: Pricing on same line or stacked */
+    .pricing-amount {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .price-original {
+        font-size: 32px;
+    }
+
+    .price-current {
+        font-size: 48px;
+    }
+
+    /* Fix 9: CTA buttons - single line or max 2 lines, smaller */
+    .btn-cta {
+        padding: 14px 28px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .btn-secondary-outline {
+        padding: 12px 24px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
 }
 
 /* ============================================
