@@ -1768,36 +1768,79 @@ body {
         text-align: left;
     }
 
-    /* Fix 7: Smaller timeline numbers on mobile */
+    /* Fix 7: Better timeline numbers design on mobile */
     .timeline-number {
-        width: 60px !important;
-        height: 60px !important;
-        font-size: 28px !important;
-        margin-bottom: 12px;
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 40px !important;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, var(--magenta), var(--magenta-ultra)) !important;
+        box-shadow: 0 12px 32px rgba(194, 23, 139, 0.4);
+        font-weight: 800;
+        border: 4px solid rgba(255, 255, 255, 0.3);
     }
 
-    /* Fix 8: Pricing on same line or stacked */
-    .pricing-amount {
+    .timeline-content {
+        padding: 28px 20px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(194, 23, 139, 0.1);
+    }
+
+    .timeline-content h3 {
+        font-size: 16px !important;
+        margin-bottom: 6px !important;
+        color: var(--black);
+    }
+
+    .timeline-days {
+        font-size: 13px !important;
+        font-weight: 700;
+        color: var(--magenta) !important;
+    }
+
+    .timeline-content p:not(.timeline-days) {
+        font-size: 13px !important;
+        line-height: 1.5;
+        color: var(--gray-dark);
+    }
+
+    /* Fix 8: Better pricing layout on mobile */
+    .price-row {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 12px;
         flex-wrap: wrap;
+        margin: 20px 0;
     }
 
-    .price-original {
-        font-size: 32px;
+    .price-old {
+        font-size: 32px !important;
+        opacity: 0.6;
+        color: var(--gray-dark) !important;
     }
 
     .price-current {
-        font-size: 48px;
+        font-size: 52px !important;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--magenta), var(--magenta-ultra));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
-    /* Fix 9: CTA buttons - single line or max 2 lines, smaller */
+    .price-save {
+        font-size: 14px !important;
+        padding: 6px 14px !important;
+        font-weight: 700;
+    }
+
+    /* Fix 9: CTA buttons - single line on mobile */
     .btn-cta {
-        padding: 14px 28px;
-        font-size: 15px;
-        white-space: nowrap;
+        padding: 14px 24px;
+        font-size: 14px;
+        line-height: 1.2;
     }
 
     .btn-secondary-outline {
