@@ -683,6 +683,7 @@ body {
     grid-template-columns: 1fr auto 1fr;
     gap: 40px;
     margin-top: 60px;
+    align-items: center;
 }
 
 .comparison-side {
@@ -738,6 +739,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    align-self: center;
 }
 
 .arrow-circle {
@@ -1686,14 +1688,14 @@ body {
     color: var(--gray-dark);
 }
 
-/* Fix 2: Arrow centered at 3rd row in comparison */
+/* Fix 2: Arrow centered vertically in comparison */
 .comparison-arrow {
-    grid-row: 3 / 4; /* Position at 3rd item */
     align-self: center;
 }
 
 .split-comparison {
     position: relative;
+    align-items: center;
 }
 
 /* Fix 3: Timeline numbers - LARGE, VISIBLE, CENTERED */
