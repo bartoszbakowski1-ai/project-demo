@@ -737,19 +737,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .arrow-circle {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
+    box-shadow: 0 10px 40px rgba(194, 23, 139, 0.3);
+    animation: pulseArrow 2s ease-in-out infinite;
+}
+
+@keyframes pulseArrow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .arrow-circle svg {
-    stroke: var(--magenta);
+    stroke: var(--white);
+    stroke-width: 3;
+    width: 48px;
+    height: 48px;
 }
 
 /* ============================================
@@ -811,28 +823,31 @@ body {
 
 .timeline-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
 .timeline-number {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
-    font-weight: 800;
+    font-size: 56px;
+    font-weight: 900;
     background: linear-gradient(135deg, var(--magenta-light), var(--magenta));
     color: var(--white);
     flex-shrink: 0;
+    box-shadow: 0 10px 40px rgba(194, 23, 139, 0.3);
 }
 
 .timeline-content {
     padding: 24px;
     border-radius: 20px;
-    min-width: 200px;
+    min-width: 280px;
+    text-align: center;
 }
 
 .timeline-content h3 {
@@ -1681,44 +1696,71 @@ body {
     position: relative;
 }
 
-/* Fix 3: Timeline numbers as background - designer style */
+/* Fix 3: Timeline numbers - LARGE, VISIBLE, CENTERED */
+.timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .timeline-number {
-    font-size: 120px !important;
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px !important;
     font-weight: 900 !important;
-    opacity: 0.08 !important;
-    position: absolute !important;
-    top: -20px !important;
-    left: 20px !important;
-    z-index: 0 !important;
     background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    pointer-events: none;
+    color: var(--white) !important;
+    flex-shrink: 0;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 40px rgba(194, 23, 139, 0.3);
 }
 
 .timeline-content {
     position: relative;
     z-index: 1;
     padding: 32px 24px !important;
+    width: 100%;
+    text-align: center;
 }
 
-.timeline-item {
-    position: relative;
-    overflow: visible;
-}
-
-/* Fix 4: Pricing badge with better spacing */
+/* Fix 4: Pricing badge - DESIGNER CORNER STYLE */
 .pricing-badge {
-    position: relative;
-    margin-bottom: 24px !important;
-    padding: 12px 24px !important;
-    font-size: 13px;
-    backdrop-filter: blur(10px);
-    background: rgba(194, 23, 139, 0.1) !important;
-    border: 2px solid rgba(194, 23, 139, 0.2);
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-ultra));
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 12px 12px 0 12px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow:
+        0 10px 40px rgba(194, 23, 139, 0.4),
+        inset 0 -2px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(2deg);
+    z-index: 10;
+}
+
+.pricing-badge::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent var(--magenta-dark) transparent transparent;
 }
 
 .pricing-header {
-    margin-top: 24px !important;
+    margin-top: 8px !important;
 }
