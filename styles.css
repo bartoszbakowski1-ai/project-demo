@@ -1724,6 +1724,13 @@ body {
         line-height: 1.1 !important;
     }
 
+    /* Fix: Large button text in 1-2 lines */
+    .btn-large {
+        padding: 14px 24px !important;
+        font-size: 14px !important;
+        line-height: 1.3 !important;
+    }
+
     /* Fix 3: Different color for subtitle text */
     .hero-subtitle {
         color: var(--magenta-dark);
